@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+string isPalindrome(string s){
+  string p = s;
+
+  reverse(s.begin(), s.end());
+  if(p == s){
+    return "Yes";
+  }
+  else{
+    return "No";
+  }
+}
+
+int main(){
+  string userInput;
+  cout << "Enter a word to check if it is palindrome or not: ";
+  getline(cin, userInput);
+
+  cout << isPalindrome(userInput);
+}
